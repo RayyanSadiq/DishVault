@@ -17,7 +17,11 @@ const DesktopSidebar = () => {
         <nav className="p-3 md:p-10 border-r min-h-screen w-24 md:w-64  hidden sm:block">
             <div className="flex flex-col gap-20 sticky top-10 left-0">
                 <div className="w-full">
-                    <img src="/logo.svg" alt="logo icon" className="hidden md:block" />
+                    <div className='hidden flex-col items-center md:flex  '>
+                        <img src="/logo.svg" alt="logo icon" />
+                        <h1 className='absolute top-44  text-2xl font-bold font-mono'>Dish Vault</h1>
+                    </div>
+
                     <img src="mobile-logo.svg" alt="logo icon" className=" block md:hidden" />
                 </div>
                 <ul className="flex flex-col items-center  md:items-start gap-8 ">
@@ -38,7 +42,7 @@ const DesktopSidebar = () => {
 const MobileSidebar = () => {
     return (
         <div className='flex justify-center gap-10 border-t fixed w-full bottom-0 left-0 bg-white z-10 p-2 sm:hidden '>
-           
+
             <Link to={"/"}  >
                 <Home size={"24"} className='cursor-pointer' />
             </Link>
